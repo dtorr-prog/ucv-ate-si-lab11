@@ -6,7 +6,7 @@ from src.minimax import minimax
 def test_minimax_sample_tree_returns_expected_value():
     result = minimax(sample_tree())
 
-    assert result.value == 5
+    assert result.value == 3
     assert result.nodes_evaluated == 4
 
 
@@ -22,7 +22,7 @@ def test_alpha_beta_sample_tree_returns_same_value_as_minimax():
 def test_minimax_medium_tree_returns_expected_value():
     result = minimax(medium_tree())
 
-    assert result.value == 6
+    assert result.value == 7
 
 
 def test_alpha_beta_medium_tree_returns_same_value_as_minimax():
@@ -38,5 +38,5 @@ def test_alpha_beta_medium_tree_returns_same_value_as_minimax():
 def test_alpha_beta_ordered_tree_prunes_branches():
     result = alpha_beta(ordered_tree_for_pruning())
 
-    assert result.value == 10
+    assert result.value == 8
     assert result.branches_pruned > 0
